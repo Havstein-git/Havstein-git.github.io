@@ -1,0 +1,373 @@
+* {
+    margin: 0px;
+    font-family: Poppins, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #fff
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 72px;
+    background-color: #fdfdfd;
+    border: 1px solid #f2f2f2;
+}
+
+/* Fonts */
+h1 {
+    font-size: 36px;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 29px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 26px;
+    line-height: 1.2em;
+    font-weight: 700;
+}
+
+.row {
+    max-width: 1440px;
+    padding: 40px 32px 0px 32px;
+}
+
+/* Menu on top for sorting menucategories*/
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
+.top-menu {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    padding: 12px 0px 4px 0px;
+    box-shadow: 1px 2px 8px 0px rgba(0, 0, 0, 0.10);
+}
+.top-menu-buttons{
+    align-self: stretch;
+    display: flex;
+    gap: 8px;
+    width: 1000px;
+    margin: 12px auto auto auto;
+    overflow: auto;
+    padding-left: 32px;
+}
+
+button {
+    border-radius: 24px;
+    border: 1px solid #4F4F4F;
+    background: #fff;
+    font-size: 18px;
+    padding: 12px 24px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #000;
+    color: #fff;
+}
+
+button:active,
+.active {
+    background: #000;
+    color: #fff;
+}
+
+
+/* RESTAURANT MENU CONTENT */
+
+.flatview {
+    display: flex;
+    padding: 40px 32px;
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch;
+    
+}
+
+.card {
+    background: #fff;
+    display: flex;
+    /*max-width: 800px;*/
+    padding: 32px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+    border-radius: 16px;
+    border: 1px solid #F2F2F2;
+    box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.05);
+}
+
+.view {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 12px 40px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.item-info {
+    display: flex;
+    min-width: 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+}
+
+/* Fodd item title*/
+.item-info h3 {
+    font-size: 20px;
+}
+
+/* Food allergies info and tags*/
+.allergi-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.allergi-info p {
+    font-size: 14px;
+    color: #454545;
+}
+
+.allergi-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+}
+
+.tags {
+    font-size: 14px;
+    display: flex;
+    padding: 4px 8px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    border: 1px solid #F2F2F2;
+    background-color: #f8f8f8;
+    color: #525252;
+}
+
+.locked {
+    background-color: #FEE2E2;
+    color: #7F1D1D;
+}
+
+.option {
+    background-color: #FEF3C7;
+    color: #615006;
+}
+
+/*Allergi filters*/
+.allergi-filter {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.allergi-filter button {
+    font-size: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+
+
+/* Food item descriton */
+.item-description p{
+    margin-top: 12px;
+}
+
+.price {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+/* Divider */
+hr.rounded {
+    display: flex;
+    align-self: stretch;
+
+    border-top: 1px solid #f2f2f2;
+  }
+  
+/* Variant fields */
+.variant {
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 4px;
+    align-self: stretch;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px 40px;
+}
+
+.variant-field {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+}
+
+.variant-field h4 {
+    font-size: 18px;
+    color: #454545;
+}
+
+/* Dropdown CSS */
+.dropdown {
+    display: inline-block;
+    padding: 20px 32px 0px 32px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    padding: 0px;
+  }
+  
+  .dropdown-content p {
+    margin: 0;
+  }
+
+  .dropdown-content .allergi-tags {
+    margin-bottom: 12px;
+  }
+  
+  .dropdown-button {
+    display: flex;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+    padding: 12px 0px 4px 0px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-button:hover {
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .show {
+    display: block;
+  }
+
+
+/* Mobile <500px */
+@media only screen and (max-width: 500px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 29px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
+
+    h4 {
+        font-size: 23px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+
+    .item-info h3 {
+        font-size: 18px;
+    }
+
+    .variant-field h4{
+        font-size: 16px;
+    }
+
+    .top-menu-buttons {
+        padding-left: 16px;
+    }
+
+    .row {
+        padding: 40px 16px 20px 16px;
+    }
+
+    .flatview {
+        padding: 40px 16px;
+    }
+
+    .price span {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dropdown {
+        padding: 20px 16px;
+    }
+}
+
+/* Overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  #popup {
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  #popup .overlay-card {
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
