@@ -4,12 +4,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
 </head>
-  <header>
-    <h1>Hello verden!</h1>
-  </header>
-  <body>
-  
-    
+<body>
+    <!--Top category filter menu-->
+    <div class="top-menu sticky">
+        <div class="top-menu-buttons">
+            <a href="#forretter">
+                <button>Forretter</button>
+            </a>
+            <a href="#hovedretter" class="smoothscroll" onclick="functionforscroll('tabs')">
+                <button>Hovedretter</button>
+            </a>    
+                <a href="#dessert">
+                <button>Dessert</button>
+            </a>
+            <button>Drikke</button>
+            <button>Alkohol</button>
+        </div>
+    </div>
+    <!--All content-->
+    <div class="content">
+        <header class="row">
+            <h1>Restaurant</h1>
+        </header>
+        <!--Dropdown-->
+        <div class="dropdown">
+            <button id="toggleButton" class="dropdown-button" onclick="toggleDropdown()">Vis allergifiltre &#x2BC6</button>
+            <div id="dropdownContent" class="dropdown-content">
+                <div class="allergi-tags">
+                    <div class="tags locked">RETTEN KAN IKKE TILPASSES</div>
+                    <div class="tags option">RETTEN KAN TILPASSES</div>
+                </div>
+                <div class="allergi-filter" id="filter">
+                    <button class="filter-tag button" data-tag="hvete">1a. Hvete</button>
+                    <button class="filter-tag button" data-tag="rug">1b. Rug</button>
+                    <button class="filter-tag button" data-tag="bygg">1c. Bygg</button>
+                    <button class="filter-tag button" data-tag="havre">1d. Havre</button>
+                    <button class="filter-tag button" data-tag="spelt">1e. Spelt</button>
+                    <button class="filter-tag button" data-tag="korasanhvete">1a. Korasanhvete</button>
+                    <button class="filter-tag button" data-tag="skalldyr">2. Skalldyr</button>
+                    <button class="filter-tag button" data-tag="egg">3. Egg</button>
+                    <button class="filter-tag button" data-tag="fisk">4. Fisk</button>
+                    <button class="filter-tag button" data-tag="peanotter">5. Peanøtter</button>
+                    <button class="filter-tag button" data-tag="soya">6. Soya</button>
+                    <button class="filter-tag button" data-tag="melk">7. Melk</button>
+                    <button class="filter-tag button" data-tag="mandler">8a. Mandler</button>
+                    <button class="filter-tag button" data-tag="hasselnotter">8b. Hasselnøtter</button>
+                    <button class="filter-tag button" data-tag="valnotter">8c. Valnøtter</button>
+                    <button class="filter-tag button" data-tag="kasjunotter">8d. Kasjunøtter</button>
+                    <button class="filter-tag button" data-tag="pekannotter">8e. Pekannøtter</button>
+                    <button class="filter-tag button" data-tag="pistasjenotter">8f. Pistasjenøtter</button>
+                    <button class="filter-tag button" data-tag="paranotter">8g. Paranøtter</button>
+                    <button class="filter-tag button" data-tag="macadamianotter">8h. Macadamianøtter</button>
+                    <button class="filter-tag button" data-tag="selleri">9. Selleri</button>
+                    <button class="filter-tag button" data-tag="sennep">10. Sennep</button>
+                    <button class="filter-tag button" data-tag="sesamfro">11. Sesamfrø</button>
+                    <button class="filter-tag button" data-tag="sulfitt">12. Svoveldioksid og sulfitter</button>
+                    <button class="filter-tag button" data-tag="lupin">13. Lupin</button>
+                    <button class="filter-tag button" data-tag="blotdyr">14. Bløtdyr</button>
+                </div>
+            </div>
+        </div>
+        <!--Menu cards-->
+        <div class="flatview">
+            <div id="forretter">
+            <h2>Forretter</h2>
+            </div>
+            <div class="card">
+                <div class="view">
+                    <div class="item-info">
+                        <h3>Karbonadesmørbrød</h3>
+                            <div class="allergi-info">
+                                <p>Inneholder:</p>
+                                <div class="allergi-tags">
+                                    <div class="tags hvete" id="hvete locked">Hvete</div>
+                                    <div class="tags rug" id="rug locked">Rug</div>
+                                    <div class="tags melk" id="melk locked">Melk</div>
+                                </div>
+                            </div>    
+                        <div class="item-description">
+                            <p>Majones, speilegg, stekt løk, salat, tomat, ertepuré og fries</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <p><span style="font-weight: 500; font-size: 14px;">fra</span> 100 kr</p>
+                    </div>
+                </div>
+                <div class="variant-field">
+                    <hr class="rounded">
+                    <h4>Varianter</h4>
+                    <div class="variant">
+                        <p>Karbonadesmørbrød - Enkel</p>
+                        <p>100 kr</p>
+                    </div>
+                    <div class="variant">
+                        <p>Karbonadesmørbrød - Dobbel</p>
+                        <p>180 kr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flatview">
+            <div id="hovedretter">
+            <h2>Hovedretter</h2>
+            </div>
+            <div class="card">
+                <div class="view">
+                    <div class="item-info">
+                        <h3>Karbonadesmørbrød</h3>
+                            <div class="allergi-info">
+                                <p>Inneholder:</p>
+                                <div class="allergi-tags">
+                                    <div class="tags melk" id="melk option">Melk</div>
+                                    <div class="tags hvete" id="hvete option">Hvete</div>
+                                </div>
+                            </div>    
+                        <div class="item-description">
+                            <p>Majones, speilegg, stekt løk, salat, tomat, ertepuré og fries</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <p><span style="font-weight: 500; font-size: 14px;">fra</span> 100 kr</p>
+                    </div>
+                </div>
+                <div class="variant-field">
+                    <hr class="rounded">
+                    <h4>Varianter</h4>
+                    <div class="variant">
+                        <p>Karbonadesmørbrød - Enkel</p>
+                        <p>100 kr</p>
+                    </div>
+                    <div class="variant">
+                        <p>Karbonadesmørbrød - Dobbel</p>
+                        <p>180 kr</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flatview">
+            <div id="dessert">
+            <h2>Dessert</h2>
+            </div>
+            <div class="card">
+                <div class="view">
+                    <div class="item-info">
+                        <h3>Allergibomben!</h3>
+                            <div class="allergi-info">
+                                <p>Inneholder:</p>
+                                <div class="allergi-tags">
+                                    <div class="tags hvete" id="hvete option">Hvete</div>
+                                    <div class="tags rug" id="rug locked">Rug</div>
+                                    <div class="tags bygg" id="bygg option">Bygg</div>
+                                    <div class="tags havre" id="havre option">Havre</div>
+                                    <div class="tags spelt" id="spelt option">Spelt</div>
+                                    <div class="tags korasanhvete" id="korasanhvete option">Korasanhvete</div>
+                                    <div class="tags skalldyr" id="skalldyr option">Skalldyr</div>
+                                    <div class="tags egg" id="egg option">Egg</div>
+                                    <div class="tags fisk" id="fisk option">Fisk</div>
+                                    <div class="tags peanotter" id="peanotter option">Peanøtter</div>
+                                    <div class="tags soya" id="soya option">Soya</div>
+                                    <div class="tags melk" id="melk option">Melk</div>
+                                    <div class="tags mandler" id="mandler option">Mandler</div>
+                                    <div class="tags hasselnotter" id="hasselnotter option">Hasselnøtter</div>
+                                    <div class="tags valnotter" id="valnotter option">Valnøtter</div>
+                                    <div class="tags kasjunotter" id="kasjunotter option">Kasjunøtter</div>
+                                    <div class="tags pekannotter" id="pekannotter option">Pekannøtter</div>
+                                    <div class="tags pistasjenotter" id="pistasjenotter option">Pistasjenøtter</div>
+                                    <div class="tags paranotter" id="paranotter option">Paranøtter</div>
+                                    <div class="tags macadamianotter" id="macadamianotter option">Macadamianøtter</div>
+                                    <div class="tags selleri" id="selleri option">Selleri</div>
+                                    <div class="tags sennep" id="sennep option">Sennep</div>
+                                    <div class="tags sesamfro" id="sesamfro option">Sesamfrø</div>
+                                    <div class="tags sulfitt" id="sulfitt option">Svoveldioksid og sulfitter</div>
+                                    <div class="tags lupin" id="lupin option">Lupin</div>
+                                    <div class="tags blotdyr" id="blotdyr option">Bløtdyr</div>
+                                </div>
+                            </div>    
+                        <div class="item-description">
+                            <p>Majones, speilegg, stekt løk, salat, tomat, ertepuré og fries</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <p><span style="font-weight: 500; font-size: 14px;"></span> 266 kr</p>
+                    </div>
+                </div>
+            </div>
+             <!-- Overlay -->
+             <div class="card popup-trigger" data-title="Karbonadesmørbrød" data-description="Majones, speilegg, stekt løk, salat, tomat, ertepuré og fries" data-price="100">
+                <div class="view">
+                    <div class="item-info">
+                        <h3>Karbonadesmørbrød</h3>
+                        <div class="allergi-info">
+                            <p>Inneholder:</p>
+                            <div class="allergi-tags">
+                                <div class="tags hvete" id="hvete locked">Hvete</div>
+                                <div class="tags melk" id="melk locked">Melk</div>
+                            </div>
+                        </div>    
+                        <div class="item-description">
+                            <p>Majones, speilegg, stekt løk, salat, tomat, ertepuré og fries</p>
+                        </div>
+                    </div>
+                    <div class="price">
+                        <p><span style="font-weight: 500; font-size: 14px;">fra</span> 100 kr</p>
+                    </div>
+                </div>
+                <div class="variant-field">
+                    <hr class="rounded">
+                    <h4>Varianter</h4>
+                    <div class="variant">
+                        <p>Karbonadesmørbrød - Enkel</p>
+                        <p>100 kr</p>
+                    </div>
+                    <div class="variant">
+                        <p>Karbonadesmørbrød - Dobbel</p>
+                        <p>180 kr</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="overlay">
+              <div id="popup">
+                <button id="closeButton">Lukk</button>
+              </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
