@@ -549,13 +549,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-//Remove # from URL
-$("a[href^='#']").click(function(e){
-  e.preventDefault();
-  var elem = $($(this).attr('href'));
-  /* check for broken link */
-  if(elem.length)
-    $(window).animate('scrollTop' , elem.offset().top)
-})
-
 //New code
